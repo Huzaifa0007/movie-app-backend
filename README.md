@@ -1,8 +1,3 @@
----
-
-## ✅ BACKEND `README.md` (movie-app-backend)
-
-```md
 # 🎬 Movie Application – Backend
 
 This repository contains the **backend API** for the Movie Application built using **Node.js, Express, and MongoDB**.  
