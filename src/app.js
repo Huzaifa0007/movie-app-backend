@@ -1,17 +1,17 @@
 const express = require("express");
 const cors = require("cors");
+const connectDB = require("./config/db");
 
 const app = express();
+
+// 🔥 CONNECT DB HERE (IMPORTANT)
+connectDB();
 
 app.use(cors());
 app.use(express.json());
 
-// ✅ HEALTH CHECK
 app.get("/", (req, res) => {
-  res.json({
-    status: "Backend is running 🚀",
-    api: "/api/movies",
-  });
+  res.json({ status: "Backend running 🚀" });
 });
 
 app.use("/api/auth", require("./routes/authRoutes"));
